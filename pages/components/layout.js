@@ -9,7 +9,6 @@ export default function Layout({children,title='',description=''}){
                 <meta name="description" content={description}></meta>
             </Head>
             <Header/>
-            <h1>Desde Layout</h1>
             {children}
             <Footer/>
         </>
