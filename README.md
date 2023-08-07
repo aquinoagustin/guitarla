@@ -1,5 +1,5 @@
 ## Gracias por visitar mi repositorio
-#### Esto es una simulacion de un eccomerce de NextJS. El proyecto se basa en una tienda de compra y venta (e-commerce) de guitarras 
+#### Esto es una simulacion de un eccomerce de NextJS (Front-end) y Strapi (Backend). El proyecto se basa en una tienda de compra y venta (e-commerce) de guitarras 
 A continuacion te cuento las Librerías que utilice para crear el proyecto
 
 #### "---": "^5.2.2", ...
