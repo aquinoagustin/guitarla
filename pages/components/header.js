@@ -23,6 +23,9 @@ export default function Header(){
                     <Link href="/blog" legacyBehavior>
                         <a className={router.pathname === '/blog' ? styles.active : ''}>Blog</a>
                     </Link>
+                    <Link href="/carrito">
+                        <Image width={30} height={25} src="/img/carrito.png" alt='imagen carrito'/>
+                    </Link>
                 </nav>
             </div>
         </header>
