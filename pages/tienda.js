@@ -32,7 +32,6 @@ export async function getStaticProps(){
     },
   }
 }
-
 // ESTO ES DE FORMA DINAMICA, SE ACTUALIZA 
 
 // export async function getServerSideProps(){
