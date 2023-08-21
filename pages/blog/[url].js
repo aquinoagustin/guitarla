@@ -1,4 +1,4 @@
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
 import Image from 'next/image';
 import {formatearFecha} from '../../utils/helpers'
 import styles from '../../styles/blog.module.css'

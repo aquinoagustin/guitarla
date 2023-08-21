@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/guitarras.module.css'
-import Layout from '../components/layout'
+import Layout from '../../components/layout'
 export default function Producto({guitarra,agregarCarrito}){
   const [cantidad,setCantidad] = useState(0)  
   const {nombre,descripcion,imagen,precio} = guitarra[0].attributes;
-  console.log(cantidad) 
   const handleSubmit = e =>{
     e.preventDefault()
     if(cantidad < 1){
@@ -56,23 +55,6 @@ export default function Producto({guitarra,agregarCarrito}){
         </Layout>
     )
 }
-/* getServerSideProps
-export async function getServerSideProps({ query: { url } }) {
-    const respuesta = await fetch(`${process.env.API_URL}/guitarras?filters[url]=${url}&populate=imagen`)
-    const { data: guitarra } = await respuesta.json()
-   
-    console.log(guitarra)
-    return {
-      props: {
-        guitarra
-      }
-    }
-  
-  */
-
-// La manera de forma estatica
-
-
   export async function getStaticPaths(){
     const respuesta = await fetch(`${process.env.API_URL}/guitarras`)
     const {data} = await respuesta.json()
@@ -91,8 +73,6 @@ export async function getServerSideProps({ query: { url } }) {
   export async function getStaticProps({ params: { url } }) {
     const respuesta = await fetch(`${process.env.API_URL}/guitarras?filters[url]=${url}&populate=imagen`)
     const { data: guitarra } = await respuesta.json()
-   
-    console.log(guitarra)
     return {
       props: {
         guitarra

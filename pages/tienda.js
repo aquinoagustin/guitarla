@@ -1,8 +1,7 @@
-import Layout from "./components/layout";
-import Guitarra from "./components/guitarra";
+import Layout from "../components/layout";
+import Guitarra from "../components/guitarra";
 import styles from '../styles/grid.module.css'
 export default function Tienda({guitarras}) {
-  console.log(guitarras)
   return (
     <div >
       <Layout title="Tienda Virtual" description='Tienda virtual, venta de guitarras'>
@@ -25,7 +24,6 @@ export default function Tienda({guitarras}) {
 export async function getStaticProps(){
   const res = await fetch(`${process.env.API_URL}/guitarras?populate=imagen`)
   const {data:guitarras} = await res.json()
-  console.log(guitarras)
   return{
     props:{
       guitarras

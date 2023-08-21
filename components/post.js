@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link";
-import { formatearFecha } from '../../utils/helpers';
-import styles from '../../styles/blog.module.css'
+import { formatearFecha } from '../utils/helpers';
+import styles from '../styles/blog.module.css'
 export default function Post({post}){
     const {contenido,imagen,titulo,url,publishedAt} = post;
     return(

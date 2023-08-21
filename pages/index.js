@@ -1,8 +1,8 @@
-import Layout from "./components/layout"
-import Guitarra from './components/guitarra'
-import Post from "./components/post"
+import Layout from "../components/layout"
+import Guitarra from '../components/guitarra'
+import Post from "../components/post"
 import styles from '../styles/grid.module.css'
-import Curso from "./components/curso"
+import Curso from "../components/curso"
 export default function Home({guitarras,posts,curso}) {
   return (
     <div >
@@ -12,15 +12,12 @@ export default function Home({guitarras,posts,curso}) {
           <div className={styles.grid}>
           {
             guitarras.map((guitarra)=>(
-              
               <Guitarra key={guitarra.id} guitarra={guitarra.attributes}/>
             ))
           }
           </div>
         </main>
-
           <Curso curso={curso[0].attributes}/>
-
         <section className="contenedor">
           <h2 className="heading">Blog</h2>
           <div className={styles.grid}>
